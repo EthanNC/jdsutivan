@@ -1,35 +1,29 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+
+import logo from "../images/logo.svg"
+
+const Header = ({ siteTitle }) => {
+  // const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <nav class="header flex justify-around items-center">
+      <div class="logo w-24 md:w-32 lg:w-48 ">
+        <Link to="/">
+        <img src={logo} alt="J.D Sutivan" />
         </Link>
-      </h1>
-    </div>
-  </header>
-)
+      </div>
+      <Link activeClassName="text-primary item text-white font-bold" to="about" class="item text-white font-bold hover:text-primary">About Us</Link>
+      <Link activeClassName="text-primary item text-white font-bold" to="projects" class="item text-white font-bold hover:text-primary">Projects</Link>
+      <Link activeClassName="text-primary item text-white font-bold" to="testimony" class="item text-white font-bold hover:text-primary">Testimony</Link>
+      <Link activeClassName="text-primary item text-white font-bold" to="biography" class="item text-white font-bold hover:text-primary">Story</Link>
+      <Link activeClassName="text-primary item text-white font-bold" to="community" class="item text-white font-bold hover:text-primary">Community</Link>
+      <Link activeClassName="text-primary item text-white font-bold" to="contact" class="item text-white font-bold hover:text-primary">Contact</Link>
+    </nav>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

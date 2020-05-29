@@ -1,4 +1,4 @@
-html {
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -618,5 +618,43 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+} */
+
+body{
+  background-color: #2d2e2d ;
+}
+.hero {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../images/hero.png');
+  background-position: center bottom ;
+}
+.logo {
+  order: 1;
+
+}
+.item {
+
+  text-decoration: none;
+
+}
+.work{
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0 1.0875rem 1.45rem;
+}
+.item:nth-of-type(n+4) {
+  order: 2;
+}
+@media all and (max-width: 800px) {
+  .header {
+    flex-direction: column;
+
+  }
+  .logo {
+    order: 0;
+    text-align: center;
+  }
+  .item {
+    text-align: center;
   }
 }
