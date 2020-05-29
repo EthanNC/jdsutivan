@@ -9,7 +9,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div class="hero flex shadow-lg py-24 justify-center">
       <div class="p-20 text-center">
-        <div class="font-bold text-5xl text-primary uppercase ">J.D Sutivan</div>
+        {/* <div class="font-bold text-5xl text-primary uppercase ">J.D Sutivan</div> */}
         <div class="md:text-3xl text-3xl text-white">
           In need of <a class="text-primary">specialized framing?</a>
         </div>
