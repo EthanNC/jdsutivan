@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div class="hero flex shadow-lg py-24 justify-center">
+    <div class="hero flex shadow-lg py-48 justify-center">
       <div class="p-20 text-center">
         {/* <div class="font-bold text-5xl text-primary uppercase ">J.D Sutivan</div> */}
         <div class="md:text-3xl text-3xl text-white">
@@ -15,9 +15,9 @@ const IndexPage = () => (
         </div>
         <div class="text-xl text-white font-normal mt-4 shadow-sm italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
         </div>
-        <div class="mt-6 flex justify-center relative">
+        <div class="mt-6 flex justify-center">
           <Link to="about">
-          <button class="bg-primary text-black p-4 shadow-lg font-bold hover:text-white">About Us</button>
+          <button className="bg-primary text-black p-4 shadow-lg font-bold hover:text-white">About Us</button>
           </Link>
         </div>
       </div>
@@ -38,7 +38,7 @@ const IndexPage = () => (
       <div class="pt-10 lg:max-w-screen-md">
       <div class="text-3xl uppercase"> Testimonial </div>
       <span class="bg-gray-400"></span>
-      <blockquote className="relative p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-primary quote">
+      <blockquote className=" p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-primary quote">
       <p className="mb-4">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem amet sunt doloremque nisi nulla maxime mollitia totam quos dolorum pariatur, corporis quidem eligendi laboriosam id unde molestiae explicabo commodi aliquam?"
       </p>

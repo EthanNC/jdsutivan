@@ -1,14 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import useDocumentScrollThrottled from '../util/useDocumentScrollThrottled'
+import Modal from "../components/modal"
 
-
-import logo from "../images/logo.svg"
+import logo from "../images/icon.png"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const ref = useRef(null);
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
 
 
@@ -29,6 +29,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <div class="fixed w-full ">
+    <Modal ref={ref}/>
     <div class="fixed flex w-full items-center justify-between flex-wrap p-4">
       <div class="w-24">
         <Link to="/">
@@ -50,10 +51,10 @@ const Header = ({ siteTitle }) => {
     <div class="bg-black bg-opacity-75 float-right pt-24">
     <ul class={isOpen ? 'md:flex flex-col flex-wrap overflow-x-hidden font-semibold ' : 'hidden'}>
       <li class="p-2 m-4">
-          <Link to='/' activeClassName="text-primary" class="text-white cursor-default">Home</Link>
+          <Link to='/' activeClassName="text-primary" class="text-white hover:text-primary">Home</Link>
         </li>
         <li class="p-2 m-4">
-          <Link to='/about/' activeClassName="text-primary" class="text-white hover:text-primary active:text-primary">About Us</Link>
+          <Link to='/about/' activeClassName="text-primary" class="text-white hover:text-primary ">About Us</Link>
         </li>
         <li class="p-2 m-4">
           <Link to='/projects/' activeClassName="text-primary" class="text-white hover:text-primary" >Projects</Link>
@@ -68,7 +69,7 @@ const Header = ({ siteTitle }) => {
           <Link to='/community/' activeClassName="text-primary"class="text-white hover:text-primary" >Community</Link>
         </li>
         <li class="p-2 m-4">
-          <Link to='/contact/' activeClassName="text-primary" class="text-white hover:text-primary" >Contact</Link>
+          <button onClick={() => {ref.current.cleanModal()}} activeClassName="text-primary" class="font-bold text-white hover:text-primary" >Contact</button>
         </li>
       </ul>
       </div>
