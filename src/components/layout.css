@@ -624,8 +624,19 @@ pre tt:after {
 body{
   background-color: #2d2e2d ;
 }
+
 .hero {
   background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../images/hero.png');
   background-position: center bottom ;
+}
+
+header{
+  transition: width 2s linear;
+
+}
+
+
+.header.hidden {
+  width: 0px
 }
 

@@ -1,12 +1,31 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
+import useDocumentScrollThrottled from '../util/useDocumentScrollThrottled'
 
 
 import logo from "../images/logo.svg"
 
 const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const [shouldHideHeader, setShouldHideHeader] = useState(false);
+
+
+  const MINIMUM_SCROLL = 1;
+  const TIMEOUT_DELAY = 200;
+
+  useDocumentScrollThrottled(callbackData => {
+    const { previousScrollTop, currentScrollTop } = callbackData;
+    const isScrolledDown =  currentScrollTop > 0;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+    setTimeout(() => {
+      setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+    }, TIMEOUT_DELAY);
+  });
+
+  const hiddenStyle = shouldHideHeader ? 'transform scale-0' : '';
 
   return (
     <div class="fixed w-full ">
@@ -16,11 +35,15 @@ const Header = ({ siteTitle }) => {
         <img src={logo} alt="J.D Sutivan" />
         </Link>
       </div>
-      <div class="absolute pl-24 font-bold text-2xl text-white uppercase" >J.D Sutivan</div>
+      <div class={`transition duration-500 linear absolute pl-24 font-bold text-2xl text-white uppercase ${hiddenStyle}`} >J.D Sutivan</div>
+      {/* <Logo/> */}
+      {/* <button class="transition duration-500 linear bg-blue-500 transform scale-0">
+  Hover me
+</button> */}
       <div class="px-4">
       <button class="hover:text-primary text-white" onClick={() => setIsOpen(!isOpen)}>
       {!isOpen && <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640"><path d="M639.965 82.56c-129.734-.035-510.16 0-639.965 0v93.12h639.965V82.56zM.036 464.368h639.929L640 557.44c-213.31 0-426.655.012-639.965.012v-93.084zm.012-190.904c213.298 0 426.608-.024 639.917-.024l.023 93.12H.048v-93.096z"/></svg>}
-      {isOpen && <svg class="fill-current" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2541 2541" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" fill-rule="nonzero"/></svg>}
+      {isOpen && <svg class="fill-current" xmlns="http://www.w3.org/2000/svg"  width="28" height="28" viewBox="0 0 2541 2541" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M29 172c-39-39-39-103 0-142s103-39 142 0l1099 1099L2369 30c39-39 103-39 142 0s39 103 0 142L1412 1271l1099 1099c39 39 39 103 0 142s-103 39-142 0L1270 1413 171 2512c-39 39-103 39-142 0s-39-103 0-142l1099-1099L29 172z" fill-rule="nonzero"/></svg>}
       </button>
       </div>
     </div>
