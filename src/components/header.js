@@ -30,13 +30,13 @@ const Header = ({ siteTitle }) => {
   return (
     <div class="fixed w-full ">
     <Modal ref={ref}/>
-    <div class="fixed flex w-full items-center justify-between flex-wrap p-4">
+    <div class="fixed bg-black flex w-full items-center justify-between flex-wrap p-4">
       <div class="w-24">
         <Link to="/">
         <img src={logo} alt="J.D Sutivan" />
         </Link>
       </div>
-      <div class={`transition duration-500 linear absolute pl-24 font-bold text-2xl text-white uppercase ${hiddenStyle}`} >J.D Sutivan</div>
+      <div class={`transition duration-500 linear absolute pl-32 font-bold text-2xl text-white uppercase ${hiddenStyle}`} >J.D Sutivan</div>
       {/* <Logo/> */}
       {/* <button class="transition duration-500 linear bg-blue-500 transform scale-0">
   Hover me

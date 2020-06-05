@@ -36,21 +36,21 @@ const IndexPage = () => (
       </Link>
       </div>
       <div class="pt-10 lg:max-w-screen-md">
-      <div class="text-3xl uppercase"> Testimonial </div>
+      {/* <div class="text-3xl uppercase"> Testimonial </div> */}
       <span class="bg-gray-400"></span>
       <blockquote className=" p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-primary quote">
       <p className="mb-4">
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem amet sunt doloremque nisi nulla maxime mollitia totam quos dolorum pariatur, corporis quidem eligendi laboriosam id unde molestiae explicabo commodi aliquam?"
+        "Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives."
       </p>
       <cite>
       <a className="text-sm" href="..." target="_blank" rel="noopener noreferrer">
-      ethan
+      William A. Foster
       </a>  
       </cite>
       </blockquote>
       <Link to="testimony">
       <button class="float-right mr-32 bg-primary text-black px-8 py-4 shadow-lg font-bold hover:text-white">
-        More Testimonials
+        Testimonials
       </button>
       </Link>
       </div>
