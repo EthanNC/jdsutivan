@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import logo from "../images/icon.png"
 
 const IndexPage = () => (
   <Layout>
@@ -26,7 +27,7 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <div class="flex items-center flex-col p-16 text-white">
+    <div class="flex items-center flex-col p-16 text-white ">
       <div class="pt-10 lg:max-w-screen-md">
         <div class="text-3xl uppercase"> Our Work </div>
         <span class="bg-gray-400"></span>
@@ -42,6 +43,7 @@ const IndexPage = () => (
           </button>
         </Link>
       </div>
+      <img src={logo} alt="logo" class="w-64 justify-center py-8"/>
       <div class="pt-10 lg:max-w-screen-md">
         <div class="text-3xl uppercase"> A Quote By <i>William A. Foster</i></div>
         <span class="bg-gray-400"></span>
