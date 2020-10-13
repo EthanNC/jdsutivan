@@ -3,9 +3,12 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Testimonial from "../components/testimonial"
 import logo from "../images/icon.png"
 
-const IndexPage = () => (
+const IndexPage = () => {
+  const quote = "Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives."
+  return(
   <Layout>
     <SEO title="Home" />
     <div class="hero flex shadow-lg py-48 justify-center">
@@ -47,23 +50,7 @@ const IndexPage = () => (
       <div class="pt-10 lg:max-w-screen-md">
         <div class="text-3xl uppercase"> A Quote By <i>William A. Foster</i></div>
         <span class="bg-gray-400"></span>
-        <blockquote className=" p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-primary quote">
-          <p className="mb-4">
-            "Quality is never an accident; it is always the result of high
-            intention, sincere effort, intelligent direction and skillful
-            execution; it represents the wise choice of many alternatives."
-          </p>
-          {/* <cite>
-            <a
-              className="text-sm"
-              href="..."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              William A. Foster
-            </a>
-          </cite> */}
-        </blockquote>
+        <Testimonial quote={quote}/>
         <Link to="testimony">
           <button class="float-right mr-32 bg-primary text-black px-8 py-4 shadow-lg font-bold hover:text-white">
             Testimonials
@@ -72,6 +59,7 @@ const IndexPage = () => (
       </div>
     </div>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
