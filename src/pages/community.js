@@ -15,7 +15,7 @@ const community = () => {
     "Coach Octavio taught me the skills of working hard, even when you feel defeated. His strong work ethic was deep-seated into our weekly training practices, from strength and agility training to team-building exercises. He would always show up early and stay late to make the most of the time we had to practice, and would always provide an encouraging and welcoming environment for the players. I learned alot about the mental and physical demands of soccer through his guidance."
   const mpAt = "Marisa Patel"
   const ecQuote =
-    "Coach Octavio taught me how to push myself to be better on and off the soccer field. His dedication to improving our team physically and mentally is unmatched. I am forever grateful for Octovio’s lessons and anyone who has the opportunity to be on his team should consider themselves lucky."
+    "Coach Octavio taught me how to push myself to be better on and off the soccer field. His dedication to improving our team physically and mentally is unmatched. I am forever grateful for Octavio’s lessons and anyone who has the opportunity to be on his team should consider themselves lucky."
   const ecAt = "Ethan Cumming"
   return (
     <Layout>
