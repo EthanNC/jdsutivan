@@ -55,84 +55,12 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
         <div
-          class={`transition duration-500 linear absolute pl-32 font-bold text-2xl text-white uppercase ${hiddenStyle} `}
+          class={`transition duration-500 linear  font-bold text-2xl text-white uppercase ${hiddenStyle} `}
         >
           J.D Sutivan
         </div>
-        <div className="invisible lg:visible ">
-        <div className=" flex flex-row space-x-4 ">
-          <div>
-            <Link
-              to="/"
-              activeClassName="text-primary"
-              class="text-white hover:text-primary"
-            >
-              Home
-            </Link>
-          </div>
-          <div>
-            <Link
-              to="/about/"
-              activeClassName="text-primary"
-              class="text-white hover:text-primary "
-            >
-              About Us
-            </Link>
-          </div>
-          <div>
-            {/* <Link to='/projects/' activeClassName="text-primary" class="text-white hover:text-primary" >Projects</Link> */}
-            <button
-              onClick={() => {
-                projectRef.current.cleanModal()
-              }}
-              activeClassName="text-primary"
-              class=" text-white hover:text-primary"
-            >
-              Projects
-            </button>
-          </div>
-          <div>
-            <Link
-              to="/testimony/"
-              activeClassName="text-primary"
-              class="text-white hover:text-primary"
-            >
-              Testimonials
-            </Link>
-          </div>
-          <div>
-            <Link
-              to="/biography/"
-              activeClassName="text-primary"
-              class="text-white hover:text-primary"
-            >
-              Biography
-            </Link>
-          </div>
-          <div>
-            <Link
-              to="/community/"
-              activeClassName="text-primary"
-              class="text-white hover:text-primary"
-            >
-              Community
-            </Link>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                contactRef.current.cleanModal()
-              }}
-              activeClassName="text-primary"
-              class=" text-white hover:text-primary"
-            >
-              Contact
-            </button>
-          </div>
-
-        </div>
-        </div>
-        <div class="px-4 pt-2 lg:hidden">
+      
+        <div class="px-4 pt-2">
           <button
             class="hover:text-primary text-white"
             onClick={() => setIsOpen(!isOpen)}
