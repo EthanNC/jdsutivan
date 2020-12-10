@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
             <img src={logo} alt="logo" class="w-32"/>
           </div>
         <div class="text-white font-bold flex items-center justify-center pb-2">
-            About J.D Sutivan 
+            About JD Sutivan 
           </div>
           <div class="border-t border-solid border-primary py-4 pl">
           <div class="flex items-center justify-center pb-2">

@@ -54,11 +54,11 @@ const Header = ({ siteTitle }) => {
             <img src={logo} alt="J.D Sutivan" />
           </Link>
         </div>
-        <div
-          class={`transition duration-500 linear  font-bold text-2xl text-white uppercase ${hiddenStyle} `}
+        <h1
+          class={`transition duration-500 linear text-3xl text-white uppercase ${hiddenStyle} `}
         >
-          J.D Sutivan
-        </div>
+          JD Sutivan
+        </h1>
       
         <div class="px-4 pt-2">
           <button
