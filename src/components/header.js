@@ -55,7 +55,7 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
         <h1
-          class={`transition duration-500 linear text-3xl text-white uppercase ${hiddenStyle} `}
+          class={`transition duration-500 linear  text-3xl text-white uppercase ${hiddenStyle} `}
         >
           JD Sutivan
         </h1>
@@ -129,15 +129,13 @@ const Header = ({ siteTitle }) => {
           </li>
           <li class="p-2 m-4">
             {/* <Link to='/projects/' activeClassName="text-primary" class="text-white hover:text-primary" >Projects</Link> */}
-            <button
-              onClick={() => {
-                projectRef.current.cleanModal()
-              }}
+            <Link
+              to="/work/"
               activeClassName="text-primary"
-              class="font-bold text-white hover:text-primary"
+              class="text-white hover:text-primary "
             >
               Projects
-            </button>
+            </Link>
           </li>
           <li class="p-2 m-4">
             <Link

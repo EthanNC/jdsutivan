@@ -4,21 +4,22 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Testimonial from "../components/testimonial"
-import logo from "../images/icon.png"
-import Modal from "../components/modal"
-import Slider from "../components/slider"
+// import Modal from "../components/modal"
+// import Slider from "../components/slider"
+import { collage } from "../images/collage";
+import Gallery from "react-photo-gallery";
 
 const IndexPage = () => {
-  const projectRef = React.useRef(null)
+  // const projectRef = React.useRef(null)
 
   const quote =
     "Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives."
   return (
     <Layout>
       <SEO title="Home" />
-      <Modal header="Projects" ref={projectRef}>
+      {/* <Modal header="Projects" ref={projectRef}>
         <Slider />
-      </Modal>
+      </Modal> */}
       <div class="hero flex shadow-lg py-48 justify-center">
         <div class="p-20 text-center">
           {/* <div class="text-4xl text-white underline">
@@ -28,17 +29,11 @@ const IndexPage = () => {
             Because we love what we do, our quality comes from creating and
             building with passion, care, and attention to the details
           </div>
-          <div class="mt-6 flex justify-center">
-            <Link to="about">
-              <button className="bg-primary text-black p-4 shadow-lg font-bold hover:text-white">
-                About Us
-              </button>
-            </Link>
-          </div>
         </div>
       </div>
+      <Gallery photos={collage}/>
       <div class="flex items-center flex-col p-16 text-white ">
-        <div class="pt-10 lg:max-w-screen-md">
+        {/* <div class="pt-10 lg:max-w-screen-md">
           <div class="text-3xl uppercase"> Our Work </div>
           <span class="bg-gray-400"></span>
           <div class="">
@@ -57,8 +52,8 @@ const IndexPage = () => {
               View Projects
             </button>
   
-        </div>
-        <img src={logo} alt="logo" class="w-64 justify-center py-8" />
+        </div> */}
+                  
         <div class="pt-10 lg:max-w-screen-md">
           <div class="text-3xl uppercase">
             {" "}
@@ -66,11 +61,6 @@ const IndexPage = () => {
           </div>
           <span class="bg-gray-400"></span>
           <Testimonial quote={quote} />
-          <Link to="testimony">
-            <button class="float-right bg-primary text-black px-8 py-4 shadow-lg font-bold hover:text-white">
-              Testimonials
-            </button>
-          </Link>
         </div>
       </div>
     </Layout>
