@@ -154,32 +154,32 @@ export const collage = [
       height: 3
     },
     {
-      src: require ('./collage6/1.jpg'),
+      src: require ('./collage6bug/1.jpg'),
       width: 4,
       height: 3
     },
     {
-      src: require ('./collage6/2.jpg'),
+      src: require ('./collage6bug/2.jpg'),
       width: 4,
       height: 3
     },
     {
-      src: require ('./collage6/3.jpg'),
+      src: require ('./collage6bug/3.jpg'),
       width: 4,
       height: 3
     },
     {
-      src: require ('./collage6/4.jpg'),
+      src: require ('./collage6bug/4.jpg'),
       width: 4,
       height: 3
     },
     {
-      src: require ('./collage6/5.jpg'),
+      src: require ('./collage6bug/5.jpg'),
       width: 4,
       height: 3
     },
     {
-      src: require ('./collage6/6.jpg'),
+      src: require ('./collage6bug/6.jpg'),
       width: 4,
       height: 3
     },
